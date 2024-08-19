@@ -1,0 +1,21 @@
+{
+  "name": "edureka-demo",
+  "version": "0.0.1",
+  "description": "Edureka demo project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "Nodejs",
+    "Demo",
+    "Edureka"
+  ],
+  "author": "Aboje <abojejunior@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  }
+}
