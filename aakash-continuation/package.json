@@ -1,0 +1,13 @@
+{
+  "name": "aakash-continuation",
+  "version": "1.0.0",
+  "main": "./inbuilt/http.js",
+  "scripts": {
+    "start": "node ./inbuilt/http.js",
+    "dev": "nodemon ./inbuilt/.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,15 @@
+{
+    "version": "0.0.1",
+    "author": "Aboje Gabriel",
+    "isApproved": true,
+    "totalPeopleCount": 1000,
+    "cities": null,
+    "people": [
+        {
+            "name": "Person 1"
+        },
+        {
+            "name": "Person 2"
+        }
+    ]
+}
