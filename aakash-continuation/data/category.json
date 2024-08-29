@@ -18,5 +18,19 @@ db.category.insert([
         "id":4,
         "category": "Footwear",
         "thumb":"https://i.ibb.co/r3SZq8S/footware.jpg"
+    },
+    {
+        "id":5,
+        "category": "Lifestyle",
+        "thumb":"https://i.ibb.co/r3SZq8S/footware.jpg"
     }
 ])
+
+// db.category.updateOne(
+// {"id":2},
+// {
+//     $set: {
+//         "category":"Electronics"
+//     }
+// }
+// )
