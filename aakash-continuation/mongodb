@@ -1,0 +1,98 @@
+db.collection.find({condition},{projection})
+
+db.restaurants.find({state_id:1},{restaurant_name:1,state_id:1,address:1,_id:0})
+
+db.collection.drop()
+
+db.restaurants.find({state_id:1},{restaurant_name:1,state_id:1,address:1,_id:0}).sort({restaurant_name:1})
+
+db.restaurants.find({state_id:1},{restaurant_name:1,state_id:1,address:1,_id:0}).sort({restaurant_name:-1})
+
+db.restaurants.find({state_id:1},{restaurant_name:1,state_id:1,address:1,_id:0}).sort({restaurant_name:1}).skip(2)
+
+db.restaurants.find({state_id:1},{restaurant_name:1,state_id:1,address:1,_id:0}).sort({restaurant_name:1}).skip(0).limit(3)
+
+db.restaurants.find({state_id:1},{restaurant_name:1,state_id:1,address:1,_id:0}).sort({restaurant_name:1}).skip(3).limit(3)
+
+db.restaurants.find({state_id:1},{restaurant_name:1,state_id:1,address:1,_id:0}).sort({restaurant_name:1}).skip(6).limit(3)
+
+db.restaurants.find({"mealTypes.mealtype_id":1},{restaurant_name:1,mealTypes:1})
+
+db.restaurants.find({cost:{$gt:500,$lt:1000}},{restaurant_name:1,cost:1})
+
+db.restaurants.find({
+    $and:[
+        {"mealTypes.mealtype_id":1},
+        {"cuisines.cuisine_id":1}
+    ]
+},{restaurant_name:1,mealTypes:1,cuisines:1})
+
+
+db.restaurants.find({
+    $or:[
+        {"mealTypes.mealtype_id":1},
+        {"cuisines.cuisine_id":1}
+    ]
+},{restaurant_name:1,mealTypes:1,cuisines:1})
+
+//update
+db.user.updateOne({condition},{$set:vaue})
+
+db.user.updateOne(
+{_id:ObjectId("66cdb1bfea54078c82440b32")},
+{
+    $set:{
+        phone:1234567891,
+        age:20
+    }
+}
+)
+
+
+db.user.updateOne(
+{_id:ObjectId("66cdb1bfea54078c82440b32")},
+{
+    $unset:{
+        age:20
+    }
+}
+)
+
+// insert a record if it doesn't exist
+db.user.updateOne(
+{name:"Samuel"},
+{
+    $set:{
+        phone:12344111,
+        age:20
+    }
+},
+{upsert:true}
+)
+
+//update multiple records
+db.user.updateOne(
+{name:"Samuel"},
+{
+    $set:{
+        phone:12344111,
+        age:20
+    }
+},
+{upsert:true},
+{multi:true}
+)
+
+
+//delete
+// remove all data
+db.user.remove({})
+
+// remove particular records
+db.user.remove({condition})
+
+db.user.remove({name:"Samuel"})
+
+db.user.deleteOne({name:"baby g"})
+
+
